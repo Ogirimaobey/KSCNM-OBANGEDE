@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Kogi State College of Nursing & Midwifery</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Use the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* A subtle background pattern for a professional feel */
+        .bg-pattern {
+            background-color: #f0f4f8;
+            background-image:  
+                linear-gradient(135deg, #e1e8f0 25%, transparent 25%), 
+                linear-gradient(225deg, #e1e8f0 25%, transparent 25%),
+                linear-gradient(45deg, #e1e8f0 25%, transparent 25%),
+                linear-gradient(315deg, #e1e8f0 25%, #f0f4f8 25%);
+            background-position:  40px 0, 40px 0, 0 0, 0 0;
+            background-size: 80px 80px;
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+<body class="bg-pattern text-gray-800">
+
+    <!-- Main container that centers the content -->
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+
+        <!-- Login Card -->
+        <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden transform transition-all hover:scale-[1.01] duration-300">
+            
+            <!-- Header Section -->
+            <div class="p-8 border-b border-gray-200">
+                <div class="flex flex-col items-center text-center">
+                    <!-- Placeholder for School Logo -->
+                    <div class="w-20 h-20 mb-4 bg-gray-200 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v11.494m-5.747-8.995a4.5 4.5 0 100 6.002 4.5 4.5 0 000-6.002zM17.747 8.752a4.5 4.5 0 100 6.002 4.5 4.5 0 000-6.002z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-xl font-bold text-gray-800">Kogi State College of Nursing & Midwifery</h1>
+                    <p class="text-sm text-gray-500 mt-1">Obangede, Kogi State</p>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="p-8">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl font-bold text-blue-800">Student Portal Login</h2>
+                    <p class="text-gray-500 mt-1">Access your academic dashboard.</p>
+                </div>
+                
+                <form action="#" method="POST">
+                    <div class="space-y-5">
+                        <!-- Student ID Input -->
+                        <div>
+                            <label for="student-id" class="text-sm font-medium text-gray-700">Student ID</label>
+                            <input type="text" id="student-id" name="student-id" placeholder="e.g., KSCNM/23/1001"
+                                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                        
+                        <!-- Password Input -->
+                        <div>
+                            <label for="password" class="text-sm font-medium text-gray-700">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your secure password"
+                                class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        </div>
+                    </div>
+                    
+                    <!-- Link for forgotten password -->
+                    <div class="text-right mt-4">
+                        <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                            Forgot Password?
+                        </a>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="mt-8">
+                        <button type="submit"
+                            class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-white font-bold bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Footer Section -->
+            <div class="px-8 py-4 bg-gray-50 text-center text-xs text-gray-500 border-t border-gray-200">
+                <p>&copy; 2025 Kogi State College of Nursing & Midwifery. All Rights Reserved.</p>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
