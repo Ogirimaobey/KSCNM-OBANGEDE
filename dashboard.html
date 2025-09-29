@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - KSCNM</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for UI elements -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* A light, clean background */
+        }
+        /* Custom styles for a professional look */
+        .card {
+            background-color: white;
+            border-radius: 1rem; /* Softer corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo and School Name -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v11.494m-5.747-8.995a4.5 4.5 0 100 6.002 4.5 4.5 0 000-6.002zM17.747 8.752a4.5 4.5 0 100 6.002 4.5 4.5 0 000-6.002z" /></svg>
+                    </div>
+                    <span class="text-lg font-bold text-gray-800 hidden sm:block">Kogi State College of Nursing & Midwifery</span>
+                </div>
+                <!-- Logout Button -->
+                <a href="student_portal.html" class="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-transform transform hover:scale-105">
+                    <i data-feather="log-out" class="w-5 h-5"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="p-4 sm:p-6 lg:p-8">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Welcome Header -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900">Student Dashboard</h1>
+                <p class="text-gray-600 mt-1">Welcome back, <span class="font-semibold text-blue-700">Jane Doe</span>.</p>
+            </div>
+
+            <!-- Student Information Card -->
+            <div class="card p-6 mb-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center"><i data-feather="user" class="mr-2 text-blue-600"></i>Student Details</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                        <span class="font-semibold text-gray-500">Full Name:</span>
+                        <p class="text-gray-900 font-medium">Jane Funmilayo Doe</p>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-500">Student ID:</span>
+                        <p class="text-gray-900 font-medium">KSCNM/23/1001</p>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-500">Program:</span>
+                        <p class="text-gray-900 font-medium">General Nursing</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Results Card -->
+            <div class="card p-6">
+                 <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center"><i data-feather="book-open" class="mr-2 text-blue-600"></i>Academic Results</h2>
+                <p class="text-sm text-gray-600 mb-6">Showing results for First Semester, 2024/2025 Academic Session.</p>
+                
+                <!-- Results Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-gray-50 border-b-2 border-gray-200">
+                            <tr>
+                                <th class="p-4 text-sm font-semibold text-gray-600">Course Code</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600">Course Title</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 text-center">Credit Units</th>
+                                <th class="p-4 text-sm font-semibold text-gray-600 text-center">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sample Row 1 -->
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-medium text-gray-800">NUR 101</td>
+                                <td class="p-4 text-gray-700">Foundations of Nursing</td>
+                                <td class="p-4 text-gray-700 text-center">4</td>
+                                <td class="p-4 text-center font-bold text-green-600">A</td>
+                            </tr>
+                            <!-- Sample Row 2 -->
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-medium text-gray-800">ANA 101</td>
+                                <td class="p-4 text-gray-700">Human Anatomy I</td>
+                                <td class="p-4 text-gray-700 text-center">3</td>
+                                <td class="p-4 text-center font-bold text-blue-600">B</td>
+                            </tr>
+                            <!-- Sample Row 3 -->
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-medium text-gray-800">PHY 101</td>
+                                <td class="p-4 text-gray-700">Human Physiology I</td>
+                                <td class="p-4 text-gray-700 text-center">3</td>
+                                <td class="p-4 text-center font-bold text-green-600">A</td>
+                            </tr>
+                             <!-- Sample Row 4 -->
+                             <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-4 font-medium text-gray-800">SOC 101</td>
+                                <td class="p-4 text-gray-700">Introduction to Sociology</td>
+                                <td class="p-4 text-gray-700 text-center">2</td>
+                                <td class="p-4 text-center font-bold text-orange-500">C</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="bg-gray-100 font-bold">
+                                <td colspan="2" class="p-4 text-right text-gray-800">Semester GPA:</td>
+                                <td colspan="2" class="p-4 text-left text-blue-800 text-lg">4.50</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-8 py-6 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Kogi State College of Nursing & Midwifery, Obangede. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+
+</body>
+</html>
